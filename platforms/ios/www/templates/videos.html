@@ -1,8 +1,11 @@
 <ion-view title="Videos">
   <ion-content class="has-header padding">
   <ion-list>
-      <ion-item ng-repeat="video in videos"> 
-    	<h3 style="text-align:center;">{{video.titulo}}</h3>
+      <ion-item ng-repeat="video in videos">
+          <div class="item item-avatar">
+            <img src="{{video.foto}}">
+            <h2>{{video.titulo}}</h2>
+          </div>
 		<div class="video-container">
             <iframe class="youtube-player" type="text/html" ng-src="{{trustSrc(video.video_id)}}" allowfullscreen frameborder="0"></iframe>
           </div>

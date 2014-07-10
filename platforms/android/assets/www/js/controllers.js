@@ -18,20 +18,30 @@ angular.module('starter.controllers', [])
     });
 })
 
-.controller('VideosCtrl', function($scope, Videos) {
+.controller('VideosCtrl', function($scope, $sce, Videos) {
 	Videos.success(function(data) {
         $scope.videos = data;
     });
+    $scope.trustSrc = function(video_id) {
+        return $sce.trustAsResourceUrl("http://www.youtube.com/embed/"+ video_id);
+  }
 })
 
-.controller('ContatoCtrl',function($scope, $http) {
+.controller('AgendaCtrl', function($scope, Agenda) {
+	Agenda.success(function(data) {
+        $scope.agenda = data;
+    });
+})
+
+.controller('ContatoCtrl',function($scope, $http, $window) {
     $scope.submit = function(form) {
         $http({
             method: 'POST',
             url: 'http://politico.agencia128bits.com/api-contatos/',
             data: form
         }).success(function(data, status) {
-              console.log("OK", data, status)
+            $window.location.href = '#/tab/dash';
+            console.log("OK" , data, status)
         }).error(function(data, status) {
                console.log("ERR", data, status)
         });

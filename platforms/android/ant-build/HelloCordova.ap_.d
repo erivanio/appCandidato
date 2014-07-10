@@ -120,6 +120,7 @@
 /Users/erivaniovasconcelos/MobileProjects/politico/platforms/android/assets/www/plugins/com.ionic.keyboard/www/keyboard.js \
 /Users/erivaniovasconcelos/MobileProjects/politico/platforms/android/assets/www/plugins/org.apache.cordova.device/www \
 /Users/erivaniovasconcelos/MobileProjects/politico/platforms/android/assets/www/plugins/org.apache.cordova.device/www/device.js \
+/Users/erivaniovasconcelos/MobileProjects/politico/platforms/android/assets/www/templates/agenda.html \
 /Users/erivaniovasconcelos/MobileProjects/politico/platforms/android/assets/www/templates/contato.html \
 /Users/erivaniovasconcelos/MobileProjects/politico/platforms/android/assets/www/templates/fotos.html \
 /Users/erivaniovasconcelos/MobileProjects/politico/platforms/android/assets/www/templates/noticia-interna.html \

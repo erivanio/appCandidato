@@ -127,6 +127,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
           controller: 'VideosCtrl'
         }
       }
+    })
+    .state('tab.agenda', {
+      url: '/agenda',
+      views: {
+        'tab-agenda': {
+          templateUrl: 'templates/agenda.html',
+          controller: 'AgendaCtrl'
+        }
+      }
     });
 
   // if none of the above states are matched, use this as the fallback

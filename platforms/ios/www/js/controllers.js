@@ -14,7 +14,6 @@ angular.module('starter.controllers', [])
         angular.forEach(data, function(album) {
             if (album.id == $stateParams.albumId)
                 $scope.fotos = album.fotos;
-                $scope.album = album.titulo;
         });
     });
 })

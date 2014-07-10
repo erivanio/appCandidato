@@ -14,4 +14,7 @@ angular.module('starter.services', [])
 })
 .factory("Videos", function($http) {
    return $http.get('http://politico.agencia128bits.com/api-video/?format=json')
+})
+.factory("Agenda", function($http) {
+   return $http.get('http://politico.agencia128bits.com/api-agenda/?format=json')
 });
