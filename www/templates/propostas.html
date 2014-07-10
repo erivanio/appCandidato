@@ -1,8 +1,9 @@
 <ion-view title="Propostas">
   <ion-content class="has-header">
-    <ion-list>
-      <ion-item ng-repeat="proposta in propostas" type="item-text-wrap" href="#/tab/propostas/{{proposta.id}}">
-        {{proposta.titulo}}
+    <ion-list class="list">
+      <ion-item class="item" ng-class="{'item-thumbnail-left': proposta.imagem}" ng-repeat="proposta in propostas" type="item-text-wrap" href="#/tab/propostas/{{proposta.id}}">
+        <img ng-if="proposta.imagem" src="http://politico.agencia128bits.com/media/{{proposta.imagem}}.300x300_q85_detail.jpg">
+        <h2>{{proposta.titulo}}</h2>
       </ion-item>
     </ion-list>
   </ion-content>
