@@ -1,0 +1,10 @@
+<ion-view title="Fotos">
+  <ion-content class="has-header">
+  <ion-list>
+      <ion-item ng-repeat="foto in fotos" type="item-text-wrap">
+        <img src="http://politico.agencia128bits.com/media/{{foto.foto}}" width="250px" height="200px">
+        <p>{{foto.legenda}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
