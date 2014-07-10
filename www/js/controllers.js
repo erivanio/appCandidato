@@ -18,10 +18,13 @@ angular.module('starter.controllers', [])
     });
 })
 
-.controller('VideosCtrl', function($scope, Videos) {
+.controller('VideosCtrl', function($scope, $sce, Videos) {
 	Videos.success(function(data) {
         $scope.videos = data;
     });
+    $scope.trustSrc = function(video_id) {
+        return $sce.trustAsResourceUrl("http://www.youtube.com/embed/"+ video_id);
+  }
 })
 
 .controller('AgendaCtrl', function($scope, Agenda) {

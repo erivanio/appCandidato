@@ -14,14 +14,18 @@ angular.module('starter.controllers', [])
         angular.forEach(data, function(album) {
             if (album.id == $stateParams.albumId)
                 $scope.fotos = album.fotos;
+                $scope.album = album.titulo;
         });
     });
 })
 
-.controller('VideosCtrl', function($scope, Videos) {
+.controller('VideosCtrl', function($scope, $sce, Videos) {
 	Videos.success(function(data) {
         $scope.videos = data;
     });
+    $scope.trustSrc = function(video_id) {
+        return $sce.trustAsResourceUrl("http://www.youtube.com/embed/"+ video_id);
+  }
 })
 
 .controller('AgendaCtrl', function($scope, Agenda) {
