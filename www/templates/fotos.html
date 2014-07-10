@@ -1,14 +1,9 @@
 <ion-view title="Fotos">
   <ion-content class="has-header">
-  <ion-list class="list card">
-      <ion-item ng-repeat="foto in fotos" type="item-text-wrap">
-         <div class="item item-divider">
-            {{foto.legenda}}
-         </div>
-         <div class="item item-image">
-            <img src="http://politico.agencia128bits.com/media/{{foto.foto}}">
-         </div>
-      </ion-item>
-    </ion-list>
+  <ul rn-carousel class="image" style="text-align: center;">
+      <li ng-repeat="foto in fotos" ng-style="{ backgroundImage: 'url('http://politico.agencia128bits.com/media/{{foto.foto}}')' }">
+        <div class="layer" style="margin: 0 auto;"><img ng-src="http://politico.agencia128bits.com/media/{{foto.foto}}" width="90%"></div>
+      <li>
+    </ul>
   </ion-content>
 </ion-view>
